@@ -1,10 +1,6 @@
-/**
-* Template Name: Moderna
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+
+
 (function() {
   "use strict";
 
