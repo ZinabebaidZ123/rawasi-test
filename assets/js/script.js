@@ -118,3 +118,17 @@ control.addEventListener("click", () => {
     marquee.classList.toggle("marquee--vertical")
   );
 });
+
+//project section js code
+
+let btn = document.querySelector(".button");
+
+let div = document.querySelectorAll(".seeMore");
+
+ function display(){
+
+     div.classList.toggle("d-block");
+
+
+
+  }
