@@ -82,7 +82,7 @@ ul{
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  height: 85px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -99,7 +99,7 @@ ul{
 }
 
 #header .logo h1 {
-  font-size: 28px;
+  /* font-size: 100px; */
   margin: 0;
   padding: 4px 0;
   line-height: 1;
@@ -117,8 +117,9 @@ ul{
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 120px;
 }
+
 
 #main {
   margin-top: 80px;
@@ -759,89 +760,6 @@ section {
 .services .icon-box-blue:hover {
   border-color: #2282ff;
 }
-/*--------------------------------------------------------------
-# Team Section in home page
---------------------------------------------------------------*/
-.team .team-member {
-  overflow: hidden;
-  background: #fff;
-}
-
-.team .team-member .member-img {
-  position: relative;
-  /* text-align: center; */
-  overflow: hidden;
-}
-.team .team-member .member-img img{
-  /* width: 240px;
-  height: 240px; */
-}
-.team .team-member .social {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  background: rgba(255, 255, 255, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.team .team-member .social a {
-  transition: color 0.3s;
-  color: #31547c;
-  margin: 0 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.team .team-member .social a i {
-  line-height: 0;
-}
-
-.team .team-member .social a:hover {
-  color: var(--color-primary);
-}
-
-.team .team-member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
-.team .team-member .member-info {
-  padding: 25px 15px 0 15px;
-  text-align: center;
-}
-
-.team .team-member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: var(--color-secondary);
-}
-
-.team .team-member .member-info span {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  color: #6c757d;
-}
-
-.team .team-member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
-  color: #6c757d;
-}
-
-.team .team-member:hover .social {
-  opacity: 1;
-}
-
 
 /*--------------------------------------------------------------
 # Why Us
@@ -990,22 +908,13 @@ section {
 .projects .wrapper{
   padding: 66px  0;
   position: relative;
- 
-  /* background-color: #123649; */
-  /* z-index: -1; */
+
 }
 @media (min-width:300px) and (max-width:768px){
 .projects .wrapper img{
   width: 150px;
 }}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: papayawhip;
-    --color-bg: navy;
-    --color-bg-accent: #2626a0;
-  }
-}
 .marquee {
   display: flex;
   overflow: hidden;
@@ -1108,6 +1017,13 @@ section {
   display: none;
   transition: 2s ease-in-out ;
 }
+@media (min-width:300px) and (max-width:992px){
+  .marquee .img-layer h4{
+    font-size: 17px;
+    margin-top: -10px;
+  }
+}
+
 .marquee .img-box:hover .img-layer{
   display: block;
   cursor: pointer;
@@ -1192,7 +1108,106 @@ section {
 }
 
 /* team cards section style--------------------------------------- */
-.team-cards{
+
+.section-team {
+  font-family: "Poppins", sans-serif;
+  padding: 80px 0;
+}
+
+.section-team .header-section {
+  margin-bottom: 50px;
+}
+
+.section-team .header-section .small-title {
+    margin-bottom: 25px;
+  font-size: 16px;
+    font-weight: 500;
+    /* color: #3e64ff; */
+    color: #075377;
+}
+
+.section-team .header-section .title {
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.section-team .single-person {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #f6f9ff;
+  border-radius: 5px;
+}
+.section-team .single-person .button button{
+  color: #fff;
+  background-color: #1c3e68;
+}
+.section-team .single-person .button button a{
+  color: #fff;
+}
+.section-team .single-person:hover {
+  /* background: linear-gradient(to right, #016cec, #00b5f7); */
+  background: linear-gradient(to right, #041e2b, #00b5f7);
+}
+
+.section-team .single-person .person-image {
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border: 4px dashed transparent;
+    transition: padding .3s;
+}
+
+.section-team .single-person:hover .person-image {
+  padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.section-team .single-person .person-image img {
+  width: 100%;
+    border-radius: 50%;
+}
+
+.section-team .single-person .person-image .icon {
+  position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    /* background: linear-gradient(to right, #016cec, #00b5f7); */
+    background: linear-gradient(to right, #041e2b, #00b5f7);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.section-team .single-person:hover .person-image .icon {
+  background: none;
+  background-color: #fff;
+  color: #016cec;
+}
+
+.section-team .single-person .person-info .full-name {
+  margin-bottom: 10px;
+  font-size: 28px;
+    font-weight: 700;
+}
+
+.section-team .single-person .person-info .speciality {
+    text-transform: uppercase;
+    font-size: 14px;
+    /* color: #016cec; */
+    color: #075377;
+}
+
+.section-team .single-person:hover .full-name,
+.section-team .single-person:hover .speciality {
+  color: #fff;
+    }
+/* .team-cards{
   padding: 66px 0;
 }
 .team-card{
@@ -1246,7 +1261,7 @@ transform: rotateY(20deg);
   background:linear-gradient(45deg  , #075377 , #123649 );
 
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .logo .container .box{
   position: relative;
@@ -1629,13 +1644,8 @@ transform: rotateY(20deg);
 /* our-team-section---------------------------- */
 .our-team{
   padding: 66px 0;
-
-  /* position: relative; */
 }
-/* .our-team .heading{
-  padding: 20px;
-  margin: 30px;
-} */
+
 .our-team .left-side-content{
   background-color: #17455e;
   color: #f0e3e3;
@@ -1728,8 +1738,7 @@ transform: rotateY(20deg);
   left: 20%;
   padding: 10px;
   top:0;
-  
-  /* margin: 60px 0 */
+
 }
 @media (min-width: 300px) and (max-width: 992px) {
   .our-team  .left-side-content .contact-info h6{
@@ -1738,13 +1747,10 @@ transform: rotateY(20deg);
   }
   .our-team .left-side-content .member-name h6{
     font-size: 16px;
-    /* font-weight: 400; */
-    
   }
   .our-team .member-info h6{
     font-size: 20px;
-    /* font-weight: 400; */
-    
+
   }
   .our-team .member-info p{
     font-size: 15px;
@@ -1877,14 +1883,8 @@ transform: rotateY(20deg);
 /* debt-advisory section------------------------------------- */
 .debt-advisory{
   position: relative;
-  /* position: fixed; */
-  /* padding-top: 0;
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; */
 }
-.debt-advisory video {
+ video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1894,17 +1894,39 @@ transform: rotateY(20deg);
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url("/assets/img/debt-finance.png") no-repeat;
   background-size: cover;
   overflow: hidden;
   opacity:0.7;
 }
-.debt-advisory .serv-container ul li{
+/* .debt .img-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/img/debt-finance.png');
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  opacity:0.7;
+  display: none;
+  z-index: 0;
+
+}
+@media (min-width:300px) and (max-width:567px){
+   .img-overlay{
+    display: block;
+  }
+   video{
+    display: none;
+  }
+} */
+ .serv-container ul li{
   font-size: 18px;
   /* text-align: justify; */
   padding: 5px;
 }
-.debt-advisory .serv-container i{
+.serv-container i{
   margin-top: 10px;
   margin-right: 10px;
   color: #2282ff;
@@ -1913,6 +1935,8 @@ transform: rotateY(20deg);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .serv-container p{
@@ -1983,47 +2007,7 @@ transform: rotateY(20deg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* feasability section-------------------------------- */
-.feasability-banner{
-  background-image: url('https://media.istockphoto.com/id/503099393/photo/blue-business-charts-graphs-document-and-paperwork.jpg?s=612x612&w=0&k=20&c=7UlhLwnfu_tKCIHjnuzUc3laW7PhpttLOWbX40vUQHY=') ;
 
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-/* transformation section------------------------------------ */
-.transformation-banner{
-  background-image: url('https://img.freepik.com/free-photo/close-up-hand-holding-smartphone_23-2149151172.jpg?size=626&ext=jpg&ga=GA1.1.204430769.1673185501&semt=robertav1_2_sidr') ;
-
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* financial section---------------------------------------- */
-.risk-banner{
-  background-image: url('https://img.freepik.com/premium-photo/risk-management-assessment-business_31965-3020.jpg?size=626&ext=jpg&ga=GA1.2.204430769.1673185501&semt=robertav1_2_sidr') ;
-
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* solvency strategy section---------------------------------------- */
-.solvency-banner{
-  background-image: url('https://img.freepik.com/premium-photo/businessman-analyzing-company-financial-report-with-augmented-reality-graphics_34141-360.jpg?size=626&ext=jpg&ga=GA1.1.204430769.1673185501&semt=robertav1_2_sidr') ;
-
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* financial section---------------------------------------- */
-.financial-banner{
-  background-image: url('https://img.freepik.com/premium-photo/financial-growth-graph-hand-business-people-are-documenting-office-finance-financial-ideas-loan-investments_104677-78.jpg?size=626&ext=jpg&ga=GA1.1.204430769.1673185501&semt=robertav1_2_sidr') ;
-
-  height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -2092,9 +2076,12 @@ transform: rotateY(20deg);
  overflow: hidden;
  
 }
+  .footer-logo img{
+  max-height: 120px;
+}
 
 #footer .footer-newsletter {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   background: #0d2735;
 }
 
