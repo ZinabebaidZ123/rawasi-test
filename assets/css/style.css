@@ -20,6 +20,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444;
+  overflow: auto;
 }
 
 a {
@@ -31,7 +32,9 @@ a:hover {
   color: #45beff;
   text-decoration: none;
 }
-
+h2{
+  color: #1E4356;
+}
 h1,
 h2,
 h3,
@@ -360,7 +363,9 @@ ul{
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;
+  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("https://img.freepik.com/free-photo/close-up-businessman-with-digital-tablet_1098-549.jpg?size=626&ext=jpg&ga=GA1.1.1514145173.1681840861&semt=sph") no-repeat;
+  background-size: cover;
+  background-position: center ;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) rotate(0deg);
@@ -939,12 +944,7 @@ section {
   /* color: #fff; */
   animation: scroll-x var(--duration) linear infinite;
 }
-.marquee__group h4{
-  background: linear-gradient(45deg, #fff , #a0c0ec);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: capitalize;
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
@@ -1013,7 +1013,9 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(50deg , #2282ff , #255269);
+  /* background: linear-gradient(50deg , #2282ff , #255269); */
+  background-color: #fff;
+  color: #1E4356;
   display: none;
   transition: 2s ease-in-out ;
 }
@@ -1139,14 +1141,27 @@ section {
 }
 .section-team .single-person .button button{
   color: #fff;
-  background-color: #1c3e68;
+  background-color: #1E4356;
+  padding: 10px ;
+  border-radius: 10px;
+}
+
+.section-team .single-person:hover .button button{
+ 
+  background-color: #fff;
+}
+.section-team .single-person:hover .button button a{
+  background-color: #fff;
+  color: #1E4356;
 }
 .section-team .single-person .button button a{
   color: #fff;
 }
 .section-team .single-person:hover {
   /* background: linear-gradient(to right, #016cec, #00b5f7); */
-  background: linear-gradient(to right, #041e2b, #00b5f7);
+  background: linear-gradient(to right, #1E4356,#0d2735);
+  
+
 }
 
 .section-team .single-person .person-image {
@@ -1156,15 +1171,23 @@ section {
     border: 4px dashed transparent;
     transition: padding .3s;
 }
-
+.section-team .single-person .person-image img{
+  width:180px;
+  height: 180px;
+  object-fit: cover;
+}
 .section-team .single-person:hover .person-image {
   padding: 12px;
     border: 4px dashed #fff;
+    text-align: center;
+ 
 }
 
 .section-team .single-person .person-image img {
-  width: 100%;
+  /* width: 100%; */
     border-radius: 50%;
+    /* text-align: center; */
+    margin-left: 20px;
 }
 
 .section-team .single-person .person-image .icon {
@@ -1178,7 +1201,8 @@ section {
     line-height: 60px;
     text-align: center;
     /* background: linear-gradient(to right, #016cec, #00b5f7); */
-    background: linear-gradient(to right, #041e2b, #00b5f7);
+    /* background: linear-gradient(to right, #041e2b, #00b5f7); */
+    background: linear-gradient(to right, #1E4356,#0d2735);
     color: #fff;
     border-radius: 50%;
     font-size: 24px;
@@ -1207,61 +1231,6 @@ section {
 .section-team .single-person:hover .speciality {
   color: #fff;
     }
-/* .team-cards{
-  padding: 66px 0;
-}
-.team-card{
-  transition: 1s ease-in-out;
-}
-.team-card button{
-  background-color:#17455e;
-  color: #fff;
-  padding: 0.8rem 1.3rem;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
-.team-card:hover{
-transform: rotateY(20deg);
-}
-.team-card:hover .top-card{
-  background:linear-gradient(45deg  , #6d98ac , #123649 );
- -webkit-text-fill-color: transparent;
-}
-.team-card:hover button{
-  background-color: #1e4356;
-  
-}
-.team-card .card-img img{
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  transition: 2s ease-in-out;
-
-}
-
-.team-cards img{
-  border-radius: 50%;
-  width: 30%;
-  border: 4px solid #fff;
-}
-
-.bottom-card-content{
-  text-align: center;
-
-}
-.top-card{
-  padding: 5rem;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-
-  background:linear-gradient(45deg  , #075377 , #123649 );
-
-  -webkit-text-fill-color: transparent;
-} */
 
 .logo .container .box{
   position: relative;
@@ -1328,6 +1297,7 @@ transform: rotateY(20deg);
   transform-style: preserve-3d;
   padding: 20px;
   background: linear-gradient(45deg, #2282ff , #17455e);
+
   transform: translateZ(100px);
 }
 
@@ -1335,16 +1305,10 @@ transform: rotateY(20deg);
   letter-spacing: 1px;
 }
 .logo .col-sm-6{
-  /* background-color: red; */
-
-  /* margin: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* .more{
-  display: none !important;
-} */
 .btn button{
   padding: 10px 15px;
   background: #1c3745;
@@ -1355,8 +1319,9 @@ transform: rotateY(20deg);
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)), url("https://img.freepik.com/free-photo/stack-money-coin-with-trading-graph_1150-17752.jpg?w=740&t=st=1681821088~exp=1681821688~hmac=7a0a9dfab2a6eebfe05155eac1385d27fc00fb9f5df4c94d24c3c0719413d23c") center center;
+  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)), url("https://img.freepik.com/free-photo/office-desktop-with-laptop-business-man_23-2148174087.jpg?size=626&ext=jpg&ga=GA1.1.1514145173.1681840861&semt=ais") center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 100px 0;
 }
 
@@ -1455,7 +1420,6 @@ transform: rotateY(20deg);
 
 .overview-content:hover{
   background-color: #fff;
-  /* transform: scale(1.1); */
   border-radius: 20px;
 }
 .overview .overview-content i{
@@ -1467,15 +1431,12 @@ transform: rotateY(20deg);
 /* networks section------------------------------------------- */
 
 .networks {
-  /* padding: 66px 0; */
+
   color: #fff;
   position: relative;
   background-image: url('https://img.freepik.com/premium-photo/digital-transformation-conceptual-generation-technology-era_109643-131.jpg?size=626&ext=jpg&ga=GA1.2.204430769.1673185501&semt=sph');
   background-repeat: no-repeat;
   background-size: cover;
-
-
-
 }
 .networks p{
   line-height: 1.9;
@@ -1483,7 +1444,6 @@ transform: rotateY(20deg);
   font-size: 20px;
   font-weight: bold;
 
-  
 }
 @media (min-width: 300px) and (max-width: 768px) {
   .networks p {
@@ -1561,9 +1521,7 @@ transform: rotateY(20deg);
   .experience p{
     font-size: 14px;
   }
-/* .experience h3{
-  font-size: 15px !important;
-} */
+
 }
 
 .experience .exp-content{
@@ -1601,7 +1559,7 @@ transform: rotateY(20deg);
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #075377;
+  background-color: #1E4356;
   color: #fff;
   display: block;
 }
@@ -1770,12 +1728,16 @@ transform: rotateY(20deg);
 /* first-service-corporate */
 .corporate-service-banner{
    background-image: url('https://media.istockphoto.com/id/1361829777/photo/collaborate-at-office-desks-to-discuss-paperwork-a-financial-group-of-business-people-is.jpg?s=612x612&w=0&k=20&c=8UPDryOVwUYnm6vmLe3QV0FkdoZ8jNiIQeA8aJUvIRQ=');
-  height:60vh;
+  background-color: #1E4356;
+  color: #fff;
+  height:80vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position:  center;
   position: relative;
+  overflow: hidden;
 }
+
 /* second-service-business-management -----------------------------------*/
 
 .business-service-banner{
@@ -1795,7 +1757,83 @@ transform: rotateY(20deg);
   background-position:  center;
   position: relative;
 }
+.debt-banner{
+  background-color: #1E4356;
+  
+  height: 75vh;
+  color: #fff;
+  width: 56%;
+  position: relative;
 
+  padding: 66px 0;
+  margin-bottom: 66px;
+}
+.sub-service .heading button{
+  background-color: #fff;
+  color: #1E4356;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.img-cont img{
+  position: absolute;
+  overflow: hidden;
+  left: 80%;
+  top: 20%;
+
+}
+
+@media(min-width:300px) and (max-width:1000px){
+  .debt-banner{
+    height: 25vh;
+    /* width: 68%; */
+  }
+  .sub-service .heading {
+    justify-content: flex-start !important;
+  }
+  .sub-service .heading h2{
+     font-size: 19px;
+  }
+  .sub-service .heading h2 , button{
+   
+    margin-left: -60px;
+  }
+  .sub-service .heading button {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .sub-service .img-cont img{
+    top: 26% ;
+  }
+}
+.serv-cont{
+  padding: 66px 0;
+  text-align: justify;
+}
+.serv-box h3{
+  color:  #1E4356;
+  margin-top: 30px;
+}
+.serv-box h4{
+  color: #587b8f;
+  margin-top: 10px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.serv-box p{
+  text-align: justify;
+}
+
+.serv-box ul li{
+  font-size: 18px;
+  padding: 5px;
+}
+.serv-box i{
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #2282ff;
+}
  .layer{
   position: absolute;
   top: 0;
@@ -1811,16 +1849,122 @@ transform: rotateY(20deg);
 }
 .service{
   padding-top: 66px 0;
+  margin-top: 30px;
+
 }
-.service img{
-  width: 100%;
+.service .img-container{
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-15deg);
+
+}
+
+
+.service .img-container img{
+  width: 45%;
+  
+}
+.service  .overlay , .overlay2 , .overlay3{
+  width: 320px;
+  height: 320px;
+}
+.service .circle2{
+  position: absolute;
+  left: 20%;
+}
+.service  .overlay{
+  position: absolute;
+  right: 43%;
+  bottom: 3%;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  
+}
+.service .img-container2 {
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-15deg);
+  left: 34%;
+  top: 10%;
+  /* background-color: #016cec; */
+}
+.service .img-container2 .circle2{
+  position: absolute;
+  left: 20%;
+}
+.service   .overlay2{
+  position: absolute;
+   right:10%; 
+  bottom: 6%; 
+  border-radius: 50%; 
+  transform: rotate(-20deg);
+  
+}
+.service   .overlay3{
+  position: absolute;
+   right:42%; 
+  bottom: 6%; 
+  border-radius: 50%; 
+  transform: rotate(-20deg);
+  
 }
 .service  p{
   line-height: 1.9;
   text-align: justify;
 }
-.service h3{
+.service h3 , h5{
   color: #2b607c;
+}
+.service ul li{
+  padding: 10px;
+}
+.service i{
+
+ margin-top: 10px;
+margin-right: 10px;
+color: #2282ff;
+}
+.sub-serv-included{
+  padding-top: 66px 0;
+}
+.sub-serv-included .sub-serv-cont{
+  background-color: #1E4356;
+  border-radius: 20%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: 1s all;
+  /* height: 24rem; */
+}
+@media (min-width:300px) and (max-width:567px){
+  .sub-serv-included .box{
+    padding:0 40px !important;
+  }
+}
+
+
+
+.sub-serv-included .sub-serv-cont:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.sub-serv-included .sub-serv-cont img{
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 50%;
+}
+.sub-serv-included .sub-serv-cont .icon{
+  border-radius: 15px;
+
+}
+.sub-serv-included .sub-serv-cont i{
+  background-color: #fff;
+  color: #1E4356;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 /* service-included section------------------------------- */
@@ -1876,75 +2020,17 @@ transform: rotateY(20deg);
     font-size: 14px;
     
   }
-/* .service-content .sec-img {
-  display: none !important;
-} */
+
 }
 /* debt-advisory section------------------------------------- */
 .debt-advisory{
   position: relative;
-}
- video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
-  overflow: hidden;
-  opacity:0.7;
-}
-/* .debt .img-overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/img/debt-finance.png');
-  background-size: cover;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  opacity:0.7;
-  display: none;
-  z-index: 0;
-
-}
-@media (min-width:300px) and (max-width:567px){
-   .img-overlay{
-    display: block;
-  }
-   video{
-    display: none;
-  }
-} */
- .serv-container ul li{
-  font-size: 18px;
-  /* text-align: justify; */
-  padding: 5px;
-}
-.serv-container i{
-  margin-top: 10px;
-  margin-right: 10px;
-  color: #2282ff;
-}
-.debt-advisory .container{
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
 }
 
 .serv-container p{
   color: #fff;
   line-height: 1.9;
 
-  /* text-align: justify; */
-  /* font-weight: bold; */
   font-size: 20px;
 }
 @media (min-width: 300px) and (max-width: 992px) {
