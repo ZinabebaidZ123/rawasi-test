@@ -101,7 +101,7 @@ ul{
   height: 60px;
 }
 
-#header .logo h1 {
+#header .img-logo h1 {
   /* font-size: 100px; */
   margin: 0;
   padding: 4px 0;
@@ -111,17 +111,17 @@ ul{
   text-transform: uppercase;
 }
 
-#header .logo h1 a,
+#header .img-logo h1 a,
 #header .logo h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-#header .logo img {
+ #header .img-logo img {
   padding: 0;
   margin: 0;
   max-height: 120px;
-}
+} 
 
 
 #main {
@@ -1170,16 +1170,18 @@ section {
     border-radius: 50%;
     border: 4px dashed transparent;
     transition: padding .3s;
+    text-align: center;
 }
 .section-team .single-person .person-image img{
-  width:180px;
-  height: 180px;
+  width:200px;
+  height: 200px;
   object-fit: cover;
+
 }
 .section-team .single-person:hover .person-image {
   padding: 12px;
-    border: 4px dashed #fff;
-    text-align: center;
+  border: 4px dashed #fff;
+    /* text-align: center; */
  
 }
 
@@ -1187,7 +1189,7 @@ section {
   /* width: 100%; */
     border-radius: 50%;
     /* text-align: center; */
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .section-team .single-person .person-image .icon {
@@ -1730,7 +1732,7 @@ section {
    background-image: url('https://media.istockphoto.com/id/1361829777/photo/collaborate-at-office-desks-to-discuss-paperwork-a-financial-group-of-business-people-is.jpg?s=612x612&w=0&k=20&c=8UPDryOVwUYnm6vmLe3QV0FkdoZ8jNiIQeA8aJUvIRQ=');
   background-color: #1E4356;
   color: #fff;
-  height:80vh;
+  height:60vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position:  center;
@@ -1929,12 +1931,15 @@ color: #2282ff;
 }
 .sub-serv-included .sub-serv-cont{
   background-color: #1E4356;
-  border-radius: 20%;
+  border-radius: 50px;
   padding: 20px;
   text-align: center;
   color: #fff;
   transition: 1s all;
-  /* height: 24rem; */
+  height:100%;
+}
+.sub-serv-included .box{
+  min-height: 100%;
 }
 @media (min-width:300px) and (max-width:567px){
   .sub-serv-included .box{
@@ -1968,7 +1973,7 @@ color: #2282ff;
 }
 
 /* service-included section------------------------------- */
-.service-included{
+/* .service-included{
   background-color: #f4f7f8; ;
   overflow: hidden;
 }
@@ -2021,9 +2026,9 @@ color: #2282ff;
     
   }
 
-}
+} */
 /* debt-advisory section------------------------------------- */
-.debt-advisory{
+/* .debt-advisory{
   position: relative;
 }
 
@@ -2083,16 +2088,16 @@ color: #2282ff;
  color: #000;
  line-height: 1.7;
  font-size: 16px;
-}
+} */
 
 /* business-plan management s--------------------------------------- */
-.business-banner{
+/* .business-banner{
   background-image: url('https://thumbs.dreamstime.com/b/team-meeting-new-business-plan-discussing-digital-paperwork-table-intentional-sun-glare-111830510.jpg') ;
 
   height: 40vh;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact
